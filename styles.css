@@ -1,0 +1,152 @@
+:root{
+    --color-fondo-nav:  #ff00cf;
+    --color-fondo-contenedores: #ffffff;
+    --color-fondo-botones:  #ff00cf;
+    --color-fondo-botones-hover: #ffc559;
+    --color-fondo-footer: #ff00cf;
+
+    --color-borde-collapse-icon: white;
+    --color-borde-collapse-icon-focus: rgba(255, 255, 255, 0.5);
+    --color-borde-general: #f1baed;
+
+    --color-texto-titulos:  #ff00cf;
+    --color-texto-link-nav: white;
+    --color-texto-link-nav-logo: white;
+    --color-texto-link-nav-hover: #ffc559;
+    --color-texto-link-nav-active: white;
+    --color-texto-span: #ffc559;
+    --color-texto-botones: white;
+
+    
+    --color-flechas-carousel: #ff00cf;
+}
+
+header {
+    background-color: var(--color-fondo-nav);
+}
+
+footer{
+    background-color: var(--color-fondo-footer);
+}
+
+
+/* Texto del logo */
+.navbar .navbar-brand, footer p {
+    color: var(--color-texto-link-nav-logo);
+    font-weight: 600;
+}
+
+/* Texto de los links de la navbar */
+.navbar .nav-link {
+    color: var(--color-texto-link-nav) ;
+    /* color normal */
+    transition: color 0.3s;
+    /* suaviza el cambio */
+}
+
+/* Hover de los link del nav*/
+.navbar .nav-link:hover {
+    color: var(--color-texto-link-nav-hover);
+    font-weight: bold;
+}
+
+/* Link activo */
+.navbar .nav-link.active {
+    color: var(--color-texto-link-nav-active);
+    font-weight: bold;
+}
+
+/*Estilo de ícono de collapse*/
+.navbar-toggler {
+    border-color: var(--color-borde-collapse-icon);
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffde59' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.navbar-toggler:focus {
+    outline: none;
+    /* quita el borde del navegador */
+    box-shadow: 0 0 0 0.25rem var(--color-borde-collapse-icon-focus);
+    /* sombra blanca semitransparente */
+}
+
+#logo {
+    width: 30px;
+    height: 30px;
+}
+
+/*Main*/
+
+#foto-perfil {
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 0 0 0.25rem var(--color-borde-general);
+}
+
+.contenedor-foto{
+    background-color: var(--color-fondo-contenedores);
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+}
+
+
+/*Estilos generales*/
+
+h2{
+    color: var(--color-texto-titulos);
+    font-weight: bold;
+}
+
+span{
+    color: var(--color-texto-span);
+    font-weight: bold;
+}
+
+.nombre {
+    color: var(--color-texto-titulos);
+}
+
+/*Botón de contacto*/
+.btn{
+    background-color:var(--color-fondo-botones);
+    color: var(--color-texto-botones);
+    font-weight: bold;
+}
+.btn:hover {
+    background-color: var(--color-fondo-botones-hover);
+    color: var(--color-texto-botones);
+    font-weight: bold;
+}
+
+.card{
+    max-width: 22rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none; /* eliminamos la imagen por defecto */
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  position: relative;
+}
+
+.carousel-control-prev-icon::after {
+  content: '❮'; 
+  color: var(--color-flechas-carousel);
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carousel-control-next-icon::after {
+  content: '❯'; 
+  color: var(--color-flechas-carousel); 
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
